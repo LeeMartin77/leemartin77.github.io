@@ -28,11 +28,16 @@ url: "https://www.leejohnmartin.co.uk" # the base hostname & protocol for your s
 twitter_username: 
 github_username:  LeeMartin77
 show_excerpts: true
+pagination:
+  enabled: true
+  per_page: 5
+  sort_reverse: true
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 # Exclude from processing.
 # The following items will not be processed, by default.
