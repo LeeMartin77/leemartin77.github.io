@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Master of the Domain"
+date:   2020-08-23 15:00:00 +0100
+categories: software
+---
+
+Domain is one of those words I almost never heard before becoming a software developer, and now I hear it pretty much every day. The traditional definition comes from defining an area based on who rules it - and it's why it came to be associated with domain names. But in software development, it's typically used as a shorthand for a particular area of knowledge - the classic "Jordan has good domain knowledge on this, we'll bring them into it". What I've found is there can be confusion on what exactly domain knowledge means. Some strongly associate it with the technical aspects, others the business and it's requirements. Neither of these viewpoints are wrong, but in all things, confusion and misunderstanding will bring unnecessary pain.
+
+![Ruine Aggstein: https://commons.wikimedia.org/wiki/File:Ruine_Aggstein_20180527.jpg](/images/2020-08-23-master-of-the-domain.jpg)
+
+## Artworkers and Graphic Designers
+
+When I talk to people about what I used to do, I'll talk about being a graphic designer. It is what I studied for and was a big part of all the jobs I did. However, the more accurate job title for much of my career would be *artworker* - by explaining the difference between these roles, I'm going to build the framework the difference between technical and business domain knowledge. It's important to note (especially these days) that often a graphic designer and an artworker are the same person in the business - but they're still different disciplines.
+
+A graphic designer is a role that most people have an image of. Primarily, you're engaged with researching, concepting and designing imagery to fit business needs. Often this is marketing, but it can go much further than that - branding, graphs, presentations, products and many other things all need visual design. It's a broad field that an individual will often specialise within. For example, I was particularly focused on infographics during my studies, and continue to be passionate about graph and diagram design now. 
+
+Artworkers and artworking is something people tend to be less aware of. As a discipline and job, it's more focused on the technical delivery of a design. For example, when working in print, it's ensuring the files you're sending to the printer all match the exact specifications required, with the right ink levels and colours. This was much of what actually paid the bills for me when I was working in the field, especially being an in-house resource. The branding, guides, styles and imagery all mostly existed - my job was to deliver to specifications, be them digital or physical.
+
+With a graphic design hat, you'll find yourself having a lot more awareness of a business and the world it lives in. You'll know the competitors in the market and what their branding looks like. You'll know what sells vs. what doesn't to the target audience. You'll know how to make sure a graph is honest (or, if you're unscrupulous, how to make it fit a narrative). On the artworking side, your focus is on delivery. What file formats do the printers accept? What sizes of banner adverts do we need to generate for this website? How big does this title card need to be? Where design is about having contextual information, artworking is about having an understanding of the processes. I see the same thing when looking at domain knowledge - you have business knowledge, and you have technical knowledge.
+
+## Business Domain Knowledge
+
+Business domain knowledge is a bit like ronseal - it is what it says on the tin. This is knowing what the business does, where the value comes from, what the product is. It doesn't relate necessarily to things as they are - rather, it's about what the end goal needs to be. Typically this is seen as the realm of the product owner - it's a good source of requirements and features, and can be useful for trying to predict what is going to be needed next. This is also where most bugs come from - where the reality of the code doesn't match the expectation of the business. It's something I think gets ignored that *code only ever does what you tell it to do*. Code can be perfectly written and do the wrong thing from a requirements perspective - which is why agreeing requirements and a fast feedback loop to allow corrections are so important.
+
+From a developers point of view, knowledge of the business domain can be overlooked, even though it can be incredibly powerful. Having an understanding of what the business wants and needs (making sure you check any assumptions!) can give you a 6th sense for when things are going wrong. This means trying to think more like a user, trying to ignore what the code is actually doing in favour of what you expect it to do. If these things line up, you're probably on the right track.
+
+## Technical Domain Knowledge
+
+Often when developers talk about domain knowledge, they can mean the "business layer" of the codebase. The code that makes decisions on what happens when, depending on the inputs. This reflects the reality of what the software being developed actually does. When that process gets kicked off, what does it talk to? Where does the data go? What is the output? It's the view of things as they *are*, rather than what the user sees or the business requires - although you'd hope that these things are in alignment.
+
+The big payoff for this knowledge is the speed at which a developer can work within the codebase. Having a thorough understanding of the domain from a meta level (the languages, systems and services used) and the granular level (the codebase itself, it's standards and conventions) can be a real force multiplier in getting bugfixes and new features turned around. This is where the idea comes in of how long it takes a new developer to start delivering value to a business - they need to learn what the codebase is really doing before they can have confidence in changing it.
+
+## Focus on the Right Thing
+
+Which domain you should focus on - although I'd argue you should have a reasonable understanding of both - will often come down to where you work. If you work for an agency or are a freelancer/consultant, technical domain knowledge is often king - especially high level language/service knowledge. You'll often be switching the business domain you're working in, so whilst you do need to understand it, investing too much time will see a diminishing return. In my mind, in-house developers should have the opposite priority. When you're working for just one business, having a really clear understanding of the needs of that business can pay real dividends. This is because whilst the technical requirements might change day-on-day, what a business does often rarely changes. Uber is always going to be about vehicle hire. Deliveroo is about food delivery. Facebook is about owning every scrap of data that exists.
+
+What's important is that when you're talking with someone - especially across business functions - that you make sure you're using a common language. If you start saying someone has excellent domain knowledge on an area, by which you mean how it's been built, and they are then asked for new feature ideas - it might not get good results for the business. Alternatively if you're in the position of rebuilding a piece of functionality, having a room full of people who only know how it's built now might just re-introduce errors - because the code was never really meeting requirements in the first place. 

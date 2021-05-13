@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  leejohnmartinjekyllblog:
+    container_name: leejohnmartinjekyllblog
+    image: jekyll/jekyll
+    command: jekyll serve
+    volumes:
+      - ./JekyllSite:/srv/jekyll
+    ports: 
+      - '4000:4000'

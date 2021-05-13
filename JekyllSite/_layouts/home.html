@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Lee John Martin - Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet"> 
+        <style>
+            body, html {
+                font-family: 'Roboto Condensed', sans-serif;
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .profile-image {
+                border-radius: 100%;
+                max-width: 12rem;
+                max-height: 12rem;
+                overflow: hidden;
+            }
+
+            .profile-image > img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .profile-text, .error-text {
+                text-align: center;
+            }
+
+            .profile-text > h1 {
+                margin: 0.5rem 0 0.25rem 0;
+            }
+            .profile-text > h2 {
+                margin: 0 0 0.5rem 0;
+            }
+
+            .profile-buttons {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .profile-buttons > a {
+                display: block;
+                background-color: #555;
+                color: #fff;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                width: auto;
+                font-weight: 700;
+                margin: 0.25rem 0;
+                cursor: pointer;
+                font-size: 1rem;
+                text-decoration: none;
+            }
+
+            @media (min-width: 560px) {
+                .card {
+                    flex-direction: row;
+                }
+
+                .profile-text {
+                    text-align: left;
+                    margin-left: 1rem;
+                }
+
+                .profile-buttons {
+                    flex-direction: row;
+                    width: auto;
+                }
+                .profile-buttons > a  {
+                    margin: 0.25rem 0.25rem 0.25rem 0;
+                    padding: 0.5rem 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="profile-image">
+                    <img src="/images/leemartin.jpeg">
+                </div>
+                <div class="profile-text">
+                    <h1>Lee Martin</h1>
+                    <h2>Software Developer</h2>
+                    <div class="profile-buttons">
+                        <a href="mailto:hello@leejohnmartin.co.uk">Contact</button>
+						<a href="{{ site.homepage }}/blog">Blog</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

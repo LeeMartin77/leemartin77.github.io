@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Handle with Care"
+date:   2020-07-12 18:00:00 +0100
+categories: process
+---
+
+I've recently had the pleasure of reading ["The Phoenix Project"][phoenix], which is a phenominal little book. It did a lot to really make me think about how I approach my working process - both in the office and on my side projects. It's sister book, "The Unicorn Project", is on my list for later, but one thing that I've recently been dealing with at work a lot is the idea of risk. Fundamentally, good software development practices seem to fly in the face of "common sense" approaches to risk - and often the worse failings seem to happen when people try and minimise risk instead of *confronting* it.
+
+![Ralf Roletschek / roletschek.at](/images/2020-07-12-Roulette.jpg)
+*Photo credit Ralf Roletschek / [roletschek.at](http://roletschek.at/), found on [wikimedia commons](https://commons.wikimedia.org/wiki/File:13-02-27-spielbank-wiesbaden-by-RalfR-093.jpg)*
+
+## You take the big risks today, so you can deal with the aftermath tomorrow
+
+Quite often in life, you manage risk by making the risky thing the last thing you do. When you're running a race you go for the sprint finish, not the sprint start, because if you wash out at the beginning you're never getting anywhere. This tends to be grounded in the fact that often things that are risky are also unrecoverable. Within software development, it's often quite advantageous to take your risk as early as possible. When you're writing code, you should be integrating and testing your code as early as possible - after all, code that doesn't build is just text in a file. 
+
+This might well mean that your development/staging environment is in real jeopardy of being a slagheap - but that's okay. Admittedly sometimes the reality of our projects doesn't allow this - you might have a massively complex, undocumented environment for example. Whilst that's a problem itself, it's important as a developer to not let that environment poison your thinking. Sure, you could cripple the system in some way - but would you rather cripple it later, when there is less time to correct or even worse - it gets through to production unnoticed?
+
+We have two things in software that ultimately make our dealing with risk much easier. The first is version control - the fact we can roll back to arbitrary points in the past is a real luxury, especially if you're holding yourself to only commiting building/working code. The second is that correcting errors in code - whilst not always trivial - is significantly less taxing than fixing them in other industries. Especially before you hit production. 
+
+## Turn your weaknesses into strengths
+
+The reality doesn't always fit this ideal though. Above I said you might have an overly complex, shared development infrastructure. If that's the case, you have to turn what would normally be a weakness into a strength. If everyone's code needs to run on the same instance anyway - why isn't it? Forcing features/fixes to be tested in the shared realm means that if someone else is working in a distant corner and hits a bug - it can be fixed. 
+
+It's hard because this goes counter to the simple idea of being polite - the last thing anyone wants to do, is make someone else's job harder. But if they stumble across some issue that's cropped up, then you have the chance to correct it. If you didn't know there might be an issue in that area, it might well be you disrupting their workflow, has stopped you disrupting a client's.
+
+Obviously this can be applied to projects with less complex environmental problems - this is basically the idea of committing all your code to develop, or at least testing everything on an integrated platform. But it seems a lot of places don't do this - and that in a lot of instances, developers chose to work in that way. Most management teams aren't going to worry about how you work with your code - only that a release is stable, tested, and has the features they need. So if you integrate early and often, test all your code in every story, and even (shock horror) release whenever anything is done - I don't think anyone is going to complain about getting features sooner rather than later?
+
+[phoenix]: https://www.goodreads.com/book/show/17255186-the-phoenix-project

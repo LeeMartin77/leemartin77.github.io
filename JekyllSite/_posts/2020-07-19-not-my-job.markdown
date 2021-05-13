@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "Not My Job"
+date:   2020-07-19 08:45:00 +0100
+categories: process
+---
+
+When I first moved into being a full time software developer, one of the first things I had to familiarise myself with was release processes. My background was as a designer, and part of that in my previous role had been building and maintaining the company website. It was how I got a taste for code, building WordPress and Drupal components. This included getting the code for the website up onto the webserver. Even before really understanding development, I managed to get away from just FTP-ing files around and instead pulling down from a git repository to do my "releases" - even if I was doing it manually, directly SSH'ed into the server.
+
+It quite quickly made total sense in my new junior software developer role, working for a big enterprise, that I wouldn't be expected to maintain the webserver. That was infrastructure's job, and they were exceptionally good at keeping everything secure and online. You'd send in your request to do a release - usually bundled with other people's work - and then get the all clear to hit the button in your time window. If it all went wrong, just wind it back to the previous version, and try again tomorrow. Much safer.
+
+![Cubicle Land - https://commons.wikimedia.org/wiki/File:Cubicle_land.jpg](/images/2020-07-19-cubicles.jpg)
+
+When I progressed up from junior by moving company, my new employer seemed even slicker - they had well coordinated releases with set release managers, who would take care of everything. My job became primarily about writing code, and I quite quickly got much better at it. The old web developer instincts never really went away - I always like to run through the happy paths of what I've built, and innately distrust myself whenever I make a change. This has been proved right on the numerous times I've gone "Ah, I'll just push it up, it's only a one line change", to have QA immediately kick it back as being even more broken.
+
+This ability to focus on writing my code was a luxury I hadn't known before. The work grew more abstract, and it was easy to improve my code quality as time went on. Getting a change down to just a couple of lines - especially for bug fixes - sped up my code reviews significantly. The idea of "just enough" really seared into my brain - touch as little of the system as possible, like a surgeon extracting a bullet. I would strain to write elegant code, that hid away and abstracted any weirdness so other people wouldn't need to think about it.
+
+In short, I started to lose everything that makes me a good developer in the first place.
+
+## Ignorance is Strength
+
+It's quite easy as an enterprise developer to fall into the trap of thinking your job is purely to write code. And why wouldn't you? You've got a whole QA department taking care of your testing. Somewhere, an Operations team is deploying your code to production, and dealing with any immediate issues that might arise. If your company employs rigorous pull request reviews, you might even be able to rely on other people helping to correct flaws in your work before it even goes anywhere. 
+
+Even more insidious, is the idea that ultimately all these functions exist to support your code writing efforts. Clearly, time spent testing software is time that you could be writing more features - so take advantage of it, let someone else do it. The same with getting your builds to production, especially when there might be other people's code in there, that you've never touched. Why take on all that risk, all that opportunity for it to go wrong. Why should you bear the cross when something blows up, and risk it being labelled as your fault because you're closest to the explosion.
+
+A bad system will beat a good person, 9 times out of 10. I'll fully admit to allowing myself to fall into lockstep with this idea of normal. Sometimes you'll get the exceptional body - a senior who comes in, determined to shake things up and start driving value and delivering to customers. But even that can often be worn down, beaten into place with "That's just the way we've always done it". Compliance, assurance and SLAs are thrown around as to why you couldn't possibly allow a developer to release their own code. I mean, who trusts a developer with that kind of power, let alone just some guy who might have freshly joined a company.
+
+These safety measures are for your benefit as well, don't forget. Operating a blame free culture means not tying developers to their features, surely? If something goes wrong, it must have been the process that failed us - so we'll add more checks next time. Maybe we'll release less frequently, to allow more time to test. Perhaps we should add some cooling off time between releases. Maybe some kind of special approval in order to do a release outside of a preset window, that needs to come from someone high up in the business, outside of the tech team.
+
+## Losing Responsibility
+
+Blame free culture is something that often gets talked about. This can reinforce these processes - of separating an individual from the lifecycle of a software feature, so it becomes a team responsibility. The reality of this however can mean that when something inevitably goes wrong in production - and it will go wrong in production - knowing who to ask can be nearly impossible. Of the bundled changes you released overnight in your window of clearance, where exactly has the issue manifested? I mean no one can log in, so surely the guy tasked with changing the login page layout at the last minute is the man to talk to - ignoring the change to the user record schema that was added into the code base 2 weeks before this release.
+
+Instead of responding to incidents with agility and the right people lined up, because they hit the button 5 minutes ago, everything must be appraised and vetted. An appropriate response is selected. Gears are spun and the machine kicks in to resolve the issue - an issue that might be totally unknown to everyone in said machine. Blame is never apportioned, though. It was the team's mistake, so we'll note it in the logs, maybe send out some emails to the department. Accountability for your actions is truly severed. You're able to do whatever you want, whenever you want - as long as it's in the sandbox, away from the real world.
+
+The key aspect missing from this system is trust. When you begin to look at developers as being paid to write code, not solve problems, you are removing all trust in their ability to deliver value. A culture of micromanagement and avoiding responsibility for the features being delivered will creep in. People will begin to "Stay in their Lane", afraid of the backlash of stepping into another's domain. Lines will be drawn between Business, Development, QA and Operations - each step in the chain seeing the next as being subservient to them, whilst seeing the former as reckless yahoos hurling unexploded ordnance. Does this sound like psychological safety to you?
+
+Ultimately, the thing that suffers from this adherence to a controlling process and mistrusting all the other parties involved, is the business. This trust needs to flow outside of the development team as well - there needs to be trust that the business at large knows what features will deliver value to customers. If you can't trust the rest of the people you share an office with, you'll forever be looking over your shoulder, waiting for things to go wrong.
+
+The worst panic I've ever had as a software developer was when I accidentally forgot a ```WHERE``` clause in a piece of SQL, which caused a huge chunk of the system to become unusable. Looking back, what I've realised is that I wasn't really panicked because I had bricked the system - I'd made plenty of bigger mistakes in my career, even before software development. It's because for the first time, I'd made a mistake where I had zero agency to fix it. Despite being able to quickly track down the issue, I essentially had to shoulder surf a release manager fixing the problem. He did some pretty wizzy data restoration while I was convinced it would have needed restoring a backup - the real value in getting someone senior involved in an incident. What should have been a short fix, test, release cycle though - took half a day. 
+
+## Liberty Means Responsibility
+
+Ultimately, I traded my autonomy and responsibility for a sense of safety. The idea that I'm not going to be attacked when something goes wrong as a consequence of my actions. But in some ways, I struggle to understand why I'm so scared of software development. My specialisation when I worked as designer/artworker was in large format print. And I mean properly large. Exhibitions and shows were my unique selling point. I'll even chuck a picture below of easily the most nerve wracking thing I ever sent to print - a massive, 4 meter square vector illustration based on Minecraft, that went up in the V&A courtyard. 
+
+![Mincecraft at the V&A](/images/2020-07-19-minecraftva.jpg)
+
+Yet I've allowed myself to become scared by processes and procedures, that tell me I should be nervous about sending my code to production. That an army needs to stand between my keyboard and the client, and that's okay because it isn't my job to worry about it anyway. That I should be spending 100% of my time writing my code in my editor, instead of worrying about the software I'm delivering.
+
+As with most things in life, when I'm looking for the guilty party in this, I need only look in the mirror. Whilst I didn't establish any of the processes that created this divide from the software I develop, I've still been complicit in going along with it. I'll complain about the time it takes to achieve things - then wash my hands of it, and write it off as "Not my job". Because I've been told it isn't my job. 
+
+If I could encourage any developer out there reading this to do one thing, it's to try and take as much responsibility as you can for the code you write. You'll be surprised how good it feels to have responsibility for the features you deliver, even when they go a bit askew. You might worry about not being able to do this in your business, but improving yourself and your processes is entirely in your control. Bring this mentality into your personal projects - establish an idea of a "production", even if that's just a raspberry pi running somewhere, and think about the entire lifecycle of your software. 
+
+Because much like a tree falling in the woods, if no one is using your software (including you), does it really run?
+
+*This whole post is **massively** inspired by my reading the excellent [The Unicorn Project](https://www.goodreads.com/en/book/show/44333183-the-unicorn-project) by Gene Kim. Go read it, as well as it's companion book [The Phoenix Project](https://www.goodreads.com/book/show/17255186-the-phoenix-project).*
