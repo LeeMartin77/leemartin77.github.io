@@ -14,7 +14,8 @@ steps:
 
 - script: |
     cd JekyllSite
-    gem install jekyll -v 4.1.0 bundler
+    gem install jekyll -v 4.1.0 
+    gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'Install Dependencies'
     
