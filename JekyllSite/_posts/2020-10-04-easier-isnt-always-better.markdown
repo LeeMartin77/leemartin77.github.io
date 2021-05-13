@@ -3,12 +3,15 @@ layout: post
 title:  "Easier Isn't Always Better"
 date:   2020-10-04 13:00:00 +0100
 categories: software user-interface
+excerpt_separator: <!--more-->
 ---
 
 Like many other desk workers around the world, I now perform my work from home. After however many months of social distancing the office seems like a distant memory, and the vast majority of my interaction with my colleagues is online. At the heart of this for me is the group chatting and collaboration tool [Microsoft Teams](https://www.microsoft.com/en-gb/microsoft-365/microsoft-teams/group-chat-software), which I've now been using for some time - even before the pandemic. There are a lot of these tools out there and they all have slight differences, but a recent change in the Teams UI caught my attention. Teams has a concept of... well, Teams (the naming isn't the greatest), essentially groups of people within an organisation. You can then form "channels" within that team, and within the channel you can start a "conversation" - a starting post, that other users then directly reply to. Until recently, creating a new conversation was done the same way as sending a chat message - type it out and hit enter. However there is now a button with the words "New Conversation", that you must click to reveal the interface for starting a new conversation. At first glance this seems like an unnecessary extra step, especially given it's been deliberately added - but there is more to this than meets the eye.
  
 ![New Conversation button in Teams](/images/2020-10-04-easier-isnt-always-better.png)
- 
+
+<!--more-->
+
 ## Why Add the Extra Step?
  
 One of the standout reasons I can see for this change is increasing the distinction between a *channel* and a *chat*. The features are very similar (multi-user instant messaging), but their intent is different. A chat between users seems intended as a loosely defined, long running message channel. You might for example, have a chat that includes all the software developers in the company - the messages may not directly relate to the business, and instead stand to capture incidental conversation. Channels within a team in contrast would have a specific focus - a given product for example. Because users are encouraged (now) to reply to top level messages within that channel, it means the conversations remain focused on specific things - such as a production incident.
