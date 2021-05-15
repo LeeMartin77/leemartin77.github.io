@@ -7,8 +7,6 @@ categories: software infrastructure devops
 
 Over the last 6 months, Docker and containerised applications have gone from being a minor part of my life - and often a source of annoyance - to being critical in how I work. I use containers literally every day now - both in work, and when I'm tinkering outside of it. In fact when I began resurrecting this blog recently, the first thing I did was throw a docker-compose and devcontainer setup into it. I'm not late to the party out of ignorance, but because recently my mindset has really focused on one key goal - the importance of improving daily work.
 
-IMG HERE
-
 Ask yourself is this:
 
 > How long would it take me to run this solution on a new laptop?
