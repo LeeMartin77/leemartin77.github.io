@@ -12,7 +12,7 @@ After a while of banging my head against this particular wall, it was time to ta
 - The WiFi router was definitely being connected to this internet connection
 - The issue was somewhere in the WiFi network setup via the app
 
-Having established this, the offending phone was switched out for an older model - instant success. WiFi was setup first try, and could even connect to the management account using the original, more up to date phone. Somewhere there was an issue preventing my phone from completing the setup. If there hadn't been a bad assumption made at the start of the process, instead rigorously testing everything from the start, it would have been a much more relaxing Friday night. Hence, this blog post - the importance of testing as a software developer.
+Having established this, the offending phone was switched out for an older model - instant success. WiFi was setup first try, and could even connect to the management account using the original, more up to date phone. Somewhere there was an issue preventing my phone from completing the setup. If there hadn't been a bad assumption made at the start of the process, instead rigorously testing everything end-to-end, it would have been a much more relaxing Friday night. Hence, this blog post - the importance of testing as a software developer.
 
 ## Why you need to test
 
