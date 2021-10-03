@@ -21,18 +21,13 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "bash"
 	},
-
-	"mounts": [
-		"source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind"
-	],
-
+	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"yzhang.markdown-all-in-one",
 		"ginfuru.ginfuru-vscode-jekyll-syntax"
-	]
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -47,5 +42,5 @@
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+	"remoteUser": "root"
 }

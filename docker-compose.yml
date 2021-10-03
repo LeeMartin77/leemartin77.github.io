@@ -2,8 +2,9 @@ version: '3.8'
 services:
   leejohnmartinjekyllblog:
     container_name: leejohnmartinjekyllblog
-    image: jekyll/jekyll
-    command: jekyll serve
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./JekyllSite:/srv/jekyll
     ports: 
