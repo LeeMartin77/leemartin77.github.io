@@ -26,7 +26,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"yzhang.markdown-all-in-one",
-		"ginfuru.ginfuru-vscode-jekyll-syntax"
+		"ginfuru.ginfuru-vscode-jekyll-syntax",
+		"ms-azuretools.vscode-docker"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
