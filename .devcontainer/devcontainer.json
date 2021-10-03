@@ -21,11 +21,18 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": null
+		"terminal.integrated.shell.linux": "bash"
 	},
 
+	"mounts": [
+		"source=${env:HOME}${env:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind"
+	],
+
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": []
+	"extensions": [
+		"yzhang.markdown-all-in-one",
+		"ginfuru.ginfuru-vscode-jekyll-syntax"
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
