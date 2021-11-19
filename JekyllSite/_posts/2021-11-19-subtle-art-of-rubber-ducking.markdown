@@ -6,7 +6,7 @@ categories: software process
 excerpt_separator: <!--more-->
 ---
  
-It's not hard to find writing about the benefits of pair programming. As much as I sometimes enjoy tinkering away with a problem in isolation, it is easy to see that working in a pair (or sometimes even a mob) easily improves both the speed and quality of output. Throw in the extra benefits of having multiple people understanding the code, different perspectives unlocking simpler solutions, the ability to mentor members of the team - makes it hard to argue against the practice. One of the trickiest things to learn when pair programming is how to take your hands off the wheel and let someone else drive - here is my perspective on it, and maybe you'll find some good advice here.
+It's not hard to find writing about the benefits of pair programming. As much as I sometimes enjoy tinkering away with a problem in isolation, it is easy to see that working in a pair (or sometimes even a mob) easily improves both the speed and quality of output. Throw in the extra benefits of having multiple people understanding the code, different perspectives unlocking simpler solutions, the ability to mentor members of the team - makes it hard to argue against the practice. One of the trickiest things to learn when pair programming is how to take your hands off the wheel and let someone else drive - here is my perspective on it, and maybe you'll find some handy ideas here.
 
 ![Rubber Duck](/images/2021-11-19-rubber-duck.jpg)
 
@@ -30,7 +30,7 @@ The quickest way I've found to get both myself or someone else back into the flo
 
 One thing to *not* try and use as an example of this, is changing up naming. While it's important when pair programming to make sure your names of methods, classes and variables are all clear and sensible - try and save it til a mop up exercise at the end of the session. I've yet to meet a developer who can flawlessly name things off the cuff (sorry anyone who has worked with me, but you know it's true, don't hurt me), so trying to do it as a "quick win" will probably end in a long discussion that doesn't drive development forward.
 
-## Encourage the author share their thoughts
+## Encourage the author share their to thoughts
 
 Following the train of thought of the author can be incredibly challenging at the best of times. It's pretty common when coding that you'll be writing lines with the following lines actually being what fills your mind. This can be helpful to express out loud, however it's not a skill everyone naturally possesses. I'm lucky in that while I can't do *two* things at once, doing more of *one* thing is quite easy for me - so verbalising what I'm doing comes quite naturally. When co-piloting for someone else, it usually only takes a couple of prompts - a quick "Why are you doing that?" will usually suffice. The key though when someone talks through their thought process is to avoid interrupting it until it reaches a more natural break (unless they're about to do something truly mad like roll their own crypto).
 
