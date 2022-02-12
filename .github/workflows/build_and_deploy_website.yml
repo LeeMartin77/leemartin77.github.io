@@ -19,11 +19,18 @@ jobs:
       # Checkout Code
       - name: checkout
         uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: JekyllSite/vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('JekyllSite/**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
       - name: build site
         uses: helaili/jekyll-action@v2
         with:
           build_only: true
           jekyll_src: JekyllSite
+          target_path: _site
       # Get Node for CDK
       - name: get node
         uses: actions/setup-node@v2
@@ -42,7 +49,7 @@ jobs:
       # deploy cdk
       - name: deploy cdk
         working-directory: ./.infrastructure
-        run: cdk deploy
+        run: npm run cdk deploy
       # clear cloudfront
       - name: clear cloudfront
         working-directory: ./.infrastructure
