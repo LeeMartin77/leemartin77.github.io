@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: "16.13.1"
       - name: build website
-        run: make jekyll-build
+        run: make jekyll-build-ci
       # install infrastructure
       - uses: actions/cache@v2
         id: cdk-install
