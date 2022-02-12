@@ -9,6 +9,7 @@ import * as acm from 'aws-cdk-lib/aws-certificatemanager'
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront'
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins'
 import { OriginAccessIdentity } from 'aws-cdk-lib/aws-cloudfront';
+import * as lambda from 'aws-cdk-lib/aws-lambda'
 
 export class InfrastructureStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -37,11 +38,23 @@ export class InfrastructureStack extends Stack {
       validation: acm.CertificateValidation.fromDns(zone),
     });
 
+    const edgeFunction = new cloudfront.experimental.EdgeFunction(this, 'IndexHtmlRedirectFunction', {
+      runtime: lambda.Runtime.NODEJS_14_X,
+      handler: 'index.handler',
+      code: lambda.Code.fromAsset('./src/edgeLambda'),
+    });
+
     const cfDist = new cloudfront.Distribution(this, 'LeeMartinCoUkDistribution', {
       defaultBehavior: { 
           origin: new origins.S3Origin(frontendS3Bucket, {
               originAccessIdentity: frontendS3BucketOriginAccess
             }),
+          edgeLambdas: [
+            {
+              functionVersion: edgeFunction.currentVersion,
+              eventType: cloudfront.LambdaEdgeEventType.VIEWER_REQUEST
+            }
+          ],
           viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS
         },
       defaultRootObject: 'index.html',
