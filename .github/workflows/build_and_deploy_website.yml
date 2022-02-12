@@ -30,8 +30,7 @@ jobs:
         with:
           build_only: true
           jekyll_src: JekyllSite
-          jekyll_build_options: 
-            destination: _site
+          jekyll_build_options: '--destination _site'
       # Get Node for CDK
       - name: get node
         uses: actions/setup-node@v2
