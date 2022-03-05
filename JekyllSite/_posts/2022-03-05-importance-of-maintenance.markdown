@@ -13,3 +13,27 @@ Maybe I'll just go do the washing up instead...
 ![Messy Workshop - Source https://commons.wikimedia.org/wiki/File:Railway_workshop_museum_exhibition_in_Ljubljana,_Slovenia.jpg](/images/2022-03-05-importance-of-maintenance.jpg)
 
 <!--more-->
+
+## Good Intentions
+
+Usually starts with wanting to "get it working"
+
+Start piling up technical debt to "make something"
+
+Get it working, but coming back is painful
+
+## Not the Day Job
+
+We spend enough time in the day job having to trade business need against technical requirements
+
+Your personal projects should try and be a space where you can do the nice clean things you want
+
+No one is telling you what to do - so why not take the time to build it out with all the bells and whistles?
+
+## Future You
+
+Projects setup this way are so nice to come back to, because it tends toward small pieces of improvement
+
+Being able to open your laptop for half an hour, make small but measurable improvements, then walk away again
+
+Also means your project can be an exemplar of your best work - even if the end result isn't useful to anyone else
