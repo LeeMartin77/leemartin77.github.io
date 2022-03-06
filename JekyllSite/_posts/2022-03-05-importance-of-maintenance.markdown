@@ -24,11 +24,9 @@ Problem now though, is that every time you come back to the project, the spark i
 
 ## Not the Day Job
 
-We spend enough time in the day job having to trade business need against technical requirements
+The problem is you've boxed yourself into the corner most business codebases end up in, without even getting paid for the privilege. It's often easy to paint technical debt as the result of bad developers, when really it's just a perfectly reasonable tradeoff of putting business needs above the development experience. This is fine and makes sense when it's a project where the focus is on building a business and income, but when we apply the same mindset to a personal project, we are just making life hard for ourselves.
 
-Your personal projects should try and be a space where you can do the nice clean things you want
-
-No one is telling you what to do - so why not take the time to build it out with all the bells and whistles?
+A solution is to make sure that when we're building out a personal project, we take a step back and prioritse ourselves as developers. We categorically have the time to ourselves so why not make sure the codebase is *exactly* as we want it. The system can be initialised with a couple of well documentated scripts. Everything is written down and can be brought up from a clean slate easily. The code has a good suite of tests that let you make changes with confidence. You don't need to do any manual futzing in order to get it working. All of this is in service of making sure you can pick the codebase back up after a break.
 
 ## Future You
 
