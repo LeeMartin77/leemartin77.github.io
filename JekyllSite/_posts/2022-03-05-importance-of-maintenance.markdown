@@ -16,11 +16,11 @@ Maybe I'll just go do the washing up instead...
 
 ## Good Intentions
 
-Usually starts with wanting to "get it working"
+It all starts with good intentions. You've sat down with that initial "Hello world" script and started throwing some features together. You got the auth and user system in place, then figured out what infrastructure you wanted to use. Sorted out the data layer (and if you're working with SQL, got those schemas in place), and started adding some initial data. The interface is up, you can click things, it's working, it's great! Maybe you even show it to a couple of friends, they give you some feedback, it's looking really slick, and you've not even taken that long!
 
-Start piling up technical debt to "make something"
+Then you notice that a weird bug you weren't expecting. You spend a frustrating evening unpicking how you've initialised everything, to find an errant race condition in how you setup your handlers. But it's fixed! Except you stray off the happy path a little bit, and now there are bugs everywhere. Not remotely friendly bugs either - weird edge cases that cause real issues in the application. It's just a side project though, so it's fine, it all still works when you use it.
 
-Get it working, but coming back is painful
+Problem now though, is that every time you come back to the project, the spark isn't there. You were full of ideas and motivation for the project, but the technical debt has piled up and making progress is slow and unpredictable. Maybe it's time to just rewrite it in a different language, might help, except you know you'd just be building the same thing over again. The discovery phase is well and truly over, and what you're left with is something that sorta works, but that you know you don't want to come back to.
 
 ## Not the Day Job
 
