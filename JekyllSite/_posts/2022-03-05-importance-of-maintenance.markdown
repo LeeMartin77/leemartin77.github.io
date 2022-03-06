@@ -30,8 +30,8 @@ A solution is to make sure that when we're building out a personal project, we t
 
 ## Future You
 
-Projects setup this way are so nice to come back to, because it tends toward small pieces of improvement
+Beyond even a break though, building projects out this way incentivises coming back to it. When you know that working in the codebase is quick and pleasing, you don't need to try and carve out whole chunks of days to work on it. Instead you can flip your laptop open for half an hour, add a few lines of code, let the tests run, push it to the remote and let the pipeline fling it where it needs to be. You're building yourself an environment that allows your skills to flourish and your code to sing. Further than that, you can even make sweeping changes across the system with confidence, letting yourself move with speed and accuracy.
 
-Being able to open your laptop for half an hour, make small but measurable improvements, then walk away again
+Your tradeoff is that you need to make sure you tend your garden. Whenever you make changes to your project, it's important to make sure you prioritise it not making the development experience work. Instead of treating your codebase as a project you're working on, instead treat it as both the project *and* the workshop around it. *Maybe* you might leave the project itself in a slightly rough moment, simply for practical reasons, but the tools around it should be racked back away in their place. The pipeline should be working, the tests should be running, the code should be executing. Before you push your code to master, ask yourself one simple question:
 
-Also means your project can be an exemplar of your best work - even if the end result isn't useful to anyone else
+> Do I want to come back to this?
