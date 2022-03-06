@@ -6,7 +6,7 @@ categories: software process
 excerpt_separator: <!--more-->
 ---
  
-You've got that side project you were working on, right? It's been a few months, work has been busy, life has been happening, so it's not like you've done much with it. But you've got a nice clear weekend afternoon, with a few free hours you've already mentally earmarked to work on that new feature you wanted to add. Except you pick it up, and it's like it's been written by another person - spaghetti everywhere, dozens of TODO comments, the styling is completely broken and doing an `npm i` reveals a frankly terrifying list of packages need updating.
+You've got that side project you were working on, right? It's been a few months, work has been busy, life has been happening, so it's not like you've done much with it. But you've got a nice clear weekend afternoon, with a few free hours you've already mentally earmarked to work on that new feature you wanted to add. Except you pick it up, and it's like it's been written by another person - spaghetti everywhere, dozens of TODO comments, the styling is completely broken and doing an `npm i` reveals a frankly terrifying list of packages that need updating.
 
 Maybe I'll just go do the gardening instead...
 
@@ -26,7 +26,7 @@ Problem now though, is that every time you come back to the project, the spark i
 
 The problem is you've boxed yourself into the corner most business codebases end up in, without even getting paid for the privilege. It's often easy to paint technical debt as the result of bad developers, when really it's just a perfectly reasonable tradeoff of putting business needs above the development experience. This is fine and makes sense when it's a project where the focus is on building a business and income - but when we apply the same mindset to a personal project, we are just making life hard for ourselves.
 
-A solution is to make sure that when we're building out a side project, we take a step back and prioritse ourselves as developers. We categorically have the time to ourselves so why not make sure the codebase is *exactly* as we want it. The system can be initialised with a couple of well documentated scripts. Everything is written down and can be brought up from a clean slate easily. The code has a good suite of tests that let you make changes with confidence. You don't need to do any manual futzing in order to get it working. All of this is in service of making sure you can pick the codebase back up after a break.
+A solution is to make sure that when we're building out a side project, we take a step back and prioritse ourselves as developers. We categorically have the time to ourselves so why not make sure the codebase is *exactly* as we want it. The system can be initialised with a couple of well documented scripts. Everything is written down and can be brought up from a clean slate easily. The code has a good suite of tests that let you make changes with confidence. You don't need to do any manual futzing in order to get it working. All of this is in service of making sure you can pick the codebase back up after a break.
 
 ## Future You
 
