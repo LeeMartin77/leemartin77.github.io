@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "Crossing the Streams: Static functions with C# dependency injection"
+title: "Old Tools, New(ish) Tricks: Static Methods with C# Dependency Injection"
 date: 2022-07-08 10:00:00 +0100
 categories: functional programming csharp
 excerpt_separator: <!--more-->
 ---
 
-Most of my time writing code is spent in JavaScript/TypeScript/node these days, but I still like to keep an eye on C#/dotnet. It's important to keep yourself exposed to different languages and ecosystems, as often neat solutions to problems can be found in other languages, because the common uses are different. One aspect of JavaScript I've really grown to love is the functions. Being able to declare and use functions like variables unlocks some really nice code patterns, and using libraries like [neverthrow](https://www.npmjs.com/package/neverthrow) or just raw promises can allow you to enforce error handling into your application. So recently writing some C#, I've wanted to bring this kind of thinking with me, and it's been quite an experience.
+Most of my time producing software is spent in JavaScript/TypeScript/node these days, but I still like to keep an eye on C#/dotnet. It's important to keep yourself exposed to different languages and ecosystems, as often neat solutions to problems can be found in other languages, because the common uses are different. One aspect of JavaScript I've really grown to love is the functions. Being able to declare and use functions like variables unlocks some really nice code patterns, and using libraries like [neverthrow](https://www.npmjs.com/package/neverthrow) or just raw promises can allow you to enforce error handling into your application. So recently when writing some C#, I've wanted to bring this kind of thinking with me, and it's been quite an experience.
 
-![KubeCube Image](/images/2022-05-31-traefik-control.jpg)
+![Image of Handaxes](/images/2022-07-08-old-tools-new-tricks.jpg)
 
 <!--more-->
 
 ## Functions in C#
 
-The immediate salt in the wound for writing C# in a functional style is that everything needs to live in a class. You end up throwing `static` around a lot, both in class and method declarations. It was pretty telling that a lot of the methods started looking a bit like extensions, passing a record as the first argument and returning the new record out at the end. Disclaimer out of the way, the language itself feels good written this way. I have been making heavy use of the excellent [CSharpFunctionalExtensions](https://www.nuget.org/packages/CSharpFunctionalExtensions/) to give me nice `Result` responses (something I've [waxed lyrical]({% post_url 2021-06-21-playing-with-rust %}) about before), and that means you get some quite nice looking methods. We'll give ourselves a quick method to work with.
+The immediate salt in the wound for writing functional-style C# is that everything needs to live in a class. You end up throwing `static` around a lot, both in class and method declarations. Personally I've seen static methods getting a bad rap, even avoiding them myself in the post, because they don't _fit_ the OOP model very well. It was pretty telling that a lot of the methods started looking a bit like extensions, passing a record as the first argument and returning the new record out at the end. Disclaimer out of the way, the language itself feels good written this way. I have been making heavy use of the excellent [CSharpFunctionalExtensions](https://www.nuget.org/packages/CSharpFunctionalExtensions/) to give me nice `Result` responses (something I've [waxed lyrical]({% post_url 2021-06-21-playing-with-rust %}) about before), and that means you get some quite nice looking methods. We'll give ourselves a quick method to work with.
 
 ```csharp
 using CSharpFunctionalExtensions;
@@ -39,7 +39,7 @@ Tests feel really pleasant to write when working functionally. Knowing that your
 
 ## Registering implementations of delegates
 
-So we've got our method, it's nice, but how do we then put it to use? Of course you can just drop the method into code and use it, but if you're writing tests through your application, suddenly you're having to arrange your test case for the the caller of your method based on the method's implementation - not great.
+So we've got our method, it's nice, but how do we then put it to use? Of course you can just drop the method into code and use it, but if you're writing tests through your application, suddenly you're having to arrange your test case for the the caller of your method based on the method's implementation - either within the arrangement, or getting into the world of [Fakes](https://docs.microsoft.com/en-us/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2022&tabs=csharp) - not my cup of tea.
 
 This is where delegates come into the picture. [The documentation is here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), my personal shorthand for delegates however is that they're interfaces for methods. Any method on a class can act as an implementation of a delegate as long as the types match.
 
@@ -96,7 +96,7 @@ public class CriticalBusinessApplication {
 }
 ```
 
-Doing this means you can mock out your method responses, and instead of having to test situations based on inputs, you just test on what a mocked function returns.
+Doing this means you can mock out your method responses without any special test setup, and just test how your code handles method responses.
 
 ```csharp
 using Moq;
@@ -104,20 +104,21 @@ using Moq;
 [TestClass]
 public class CriticalBusinessApplication_Tests {
   [TestMethod]
-  // These numbers are deliberately nonsesnsical, as we're not testing
+  // These numbers are deliberately nonsensical, as we're not testing
   // the implementation, just that it's called.
   [DataRow(1f, 3f, 5f)]
   [DataRow(7f, 2f, 9f)]
   [DataRow(2f, 3f, 6f)]
   [DataRow(9f, 2f, 1f)]
   public void PassesNumbersToFunctionAndReturnsResult(float inputTarget, float inputDivisor, float functionResult) {
-    //Arrange
+    // Arrange
+    // You don't actually need to even use Moq here, I just like it.
     var mockFunction = new Mock<DivideAbyB>();
     mockFunction.Setup(x => x(inputTarget, inputDivisor)).Returns(functionResult);
     var cba = new CriticalBusinessApplication(mockFunction.Object);
-    //Act
+    // Act
     var output = cba.PerfectDivider(inputTarget, inputDivisor);
-    //Assert
+    // Assert
     Assert.AreEqual(functionResult, output);
     mockFunction.Verify(x => x(inputTarget, inputDivisor), Times.Once);
   }
@@ -145,5 +146,5 @@ public class MyClassThatNeedsNow {
 
 How useful is this? I'm pretty conflicted in the end. On the one hand, I really enjoy thinking about code in a more functional style - working with functions as variables in their own right that can be manipulated and used within the code. C#/dotnet has been adding features to push developers in this direction as well, such as records and pattern matching most recently in C# 9, and local functions back in C# 7. I think there is real power in a language allowing you to choose using functional features whilst still having the tools of OOP patterns when you need them.
 
-On the flip side, it's really apparent when doing this that you end up having to work _around_ parts of C# to treat methods as functions. While you can create lambdas and local functions that you can assign to variables, if you want to use them in other places in your codebase, you end up wrapping them in a class. And if you're grouping your function-methods together, you might as well put them into the same class, then give it an interface, and you're basically back where you started. In the introduction I mentioned mostly writing TypeScript and JavaScript in recent times, and I've played around with Rust, all of which feel much more friendly to functional programming. So give it a go, especially the `Result` responses and using records, but beware that stepping outside the OOP paradigm means your code can certainly start looking a little... _esoteric_.
+On the flip side, it's really apparent when doing this that you end up having to work _around_ parts of C# to treat methods as functions. While you can create lambdas and local functions that you can assign to variables, if you want to use them in other places in your codebase, you end up wrapping them in a class. And if you're grouping your function-methods together, you might as well put them into the same class, then give it an interface, and you're basically back where you started. In the introduction I mentioned mostly writing TypeScript and JavaScript in recent times, and I've played around with Rust, all of which feel much more friendly to functional programming. So give it a go, especially the `Result` responses and using records, but beware that stepping outside the OOP paradigm means your code can certainly start looking a little... _esoteric_ in C#.
 
