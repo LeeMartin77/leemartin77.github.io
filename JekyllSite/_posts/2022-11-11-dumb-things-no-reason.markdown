@@ -23,14 +23,14 @@ This is far from the first project, some examples:
 - [itwasnotamanual.com](https://itwasnotamanual.com): Tying wikipedia articles to dystopian fiction
 - [N64 Adapter](https://gist.github.com/LeeMartin77/ff9db9eaed0d54a8bbdc3c987226ec98): Arduino powered N64/USB Adapter
 - [openskull](https://openskull.dev): Online, open source version of Skull
-- A Raspberry Pi Cluster (which now hosts these mad projects)
+- [A Raspberry Pi Cluster]({% post_url 2022-05-31-traefik-oauth-proxy %}): Which now hosts these mad projects
 - QuotePosters: A project I did in my design days, turning film/book quotes into posters
-- [PaceMe](https://github.com/LeeMartin77/PaceMe.js) and [OpenFoodDiary](https://github.com/LeeMartin77/openfooddiary) - Open source fitness dashboard and calorie tracker respectively.
+- [PaceMe](https://github.com/LeeMartin77/PaceMe.js) and [OpenFoodDiary](https://github.com/LeeMartin77/openfooddiary): Open source fitness dashboard and calorie tracker respectively.
 
 None of these ideas are trying to be clever. They're not trying to find some niche that's never been done before nor try to solve a fundamental problem of the world. Usually the idea comes from one of two places:
 
-- **A catchy title:** "itwasnotamanual.com" was started because I couldn't believe the domain was available.
-- **A minor personal frustration:** The calorie tracker was because I just wanted to put numbers in a log without ads or tracking.
+- **A catchy title:** itwasnotamanual.com was started because the domain was available.
+- **A minor personal frustration:** OpenFoodDiary was because I just wanted to put numbers in a log without ads or tracking.
 
 This helps treat the endeavour as a pet tinkering project. The stakes are less than nothing, there isn't an opportunity to exploit or a competitor to try and beat. You just pick up the idea and run with it for as long as it's interesting.
 
