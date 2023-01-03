@@ -73,6 +73,7 @@ export class InfrastructureStack extends Stack {
         ],
         certificate: certificate,
         domainNames: [domainName],
+        priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
       }
     );
 
