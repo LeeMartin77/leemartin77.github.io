@@ -13,7 +13,7 @@ export class InfrastructureStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const domainName = `www.leejohnmartin.co.uk`;
+    const domainNames = [`www.leejohnmartin.co.uk`, "leejohnmartin.co.uk"];
 
     const frontendS3Bucket = new s3.Bucket(this, "LeeMartinCoUk", {
       removalPolicy: RemovalPolicy.DESTROY,
@@ -32,7 +32,8 @@ export class InfrastructureStack extends Stack {
     frontendS3Bucket.grantRead(frontendS3BucketOriginAccess);
 
     const certificate = new acm.Certificate(this, "LeeMartinCoUkCertificate", {
-      domainName,
+      domainName: domainNames[0],
+      subjectAlternativeNames: domainNames.slice(1),
       validation: acm.CertificateValidation.fromEmail(),
     });
 
@@ -72,7 +73,7 @@ export class InfrastructureStack extends Stack {
           },
         ],
         certificate: certificate,
-        domainNames: [domainName],
+        domainNames: domainNames,
         priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
       }
     );
