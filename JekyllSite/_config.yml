@@ -32,7 +32,8 @@ pagination:
   enabled: true
   per_page: 5
   sort_reverse: true
-
+collections:
+  bibliography:
 # Build settings
 theme: minima
 plugins:

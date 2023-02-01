@@ -1,0 +1,25 @@
+---
+layout: default
+title:  "Bibliography"
+---
+
+<div class="home">
+  <h1>Bibliography</h1>
+  <p>These are some of the books that I've read over the years, that have shaped the way I approach life, the universe, and everything. Ranging from professional to entertainment.</p>
+  <div id="bibliography">
+
+  {% for book in site.bibliography %}
+    <div class="bibliography-item">
+      <h2>{{book.title}}</h2>
+      <h3>{{book.author}}</h3>
+      <h4>{{book.genre}} - {{book.subgenre}}</h4>
+      <h5><a href="{{book.goodreads}}">Good Reads Link</a></h5>
+      <p>{{book.summary}}</p>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+<script>
+  
+</script>
