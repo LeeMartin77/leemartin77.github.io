@@ -1,6 +1,7 @@
 ---
 title: Don't Make Me Think
 author: Steve Krug
+image: dont-make-me-think.jpg
 goodreads: https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited
 genre: Non-Fiction
 subgenre: Design

@@ -1,6 +1,7 @@
 ---
 title: The Player of Games
 author: Iain M. Banks
+image: player-games.jpg
 goodreads: https://www.goodreads.com/book/show/18630.The_Player_of_Games
 genre: Fiction
 subgenre: Science-Fiction

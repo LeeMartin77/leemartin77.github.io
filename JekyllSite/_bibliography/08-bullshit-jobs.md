@@ -1,6 +1,7 @@
 ---
 title: "Bullshit Jobs: A Theory"
 author: David Graeber
+image: bs-jobs.jpg
 goodreads: https://www.goodreads.com/book/show/34466958-bullshit-jobs
 genre: Non-Fiction
 subgenre: Philosophy

@@ -1,6 +1,7 @@
 ---
 title: His Master's Voice
 author: Stanisław Lem
+image: masters-voice.jpg
 goodreads: https://www.goodreads.com/book/show/28763.His_Master_s_Voice
 genre: Fiction
 subgenre: Science-Fiction

@@ -1,6 +1,7 @@
 ---
 title: The Unicorn Project
 author: Gene Kim
+image: unicorn.jpg
 goodreads: https://www.goodreads.com/book/show/44333183-the-unicorn-project
 genre: Fiction
 subgenre: Computing

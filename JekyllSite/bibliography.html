@@ -10,17 +10,21 @@ title:  "Bibliography"
 
   {% for book in site.bibliography %}
     <div class="bibliography-item">
-      <h2>{{book.title}}</h2>
-      <h3>{{book.author}}</h3>
-      <h4>{{book.genre}}</h4>
-      <h5>{{book.subgenre}}</h5>
-      <h6><a href="{{book.goodreads}}">Good Reads Link</a></h6>
-      <p>{{book.summary}}</p>
+      <div class="bibliography-item-image">
+        <a href="{{book.goodreads}}" alt="Link to {{book.title}} on GoodReads">
+          <img width="200" src="/images/book_covers/{{book.image}}" alt="Cover of {{book.title}}"/>
+        </a>
+      </div>
+      <div class="bibliography-item-text">
+
+        <h2>{{book.title}}</h2>
+        <h3>{{book.author}}</h3>
+        <h4>{{book.genre}}</h4>
+        <h5>{{book.subgenre}}</h5>
+        <h6><a href="{{book.goodreads}}"  alt="Link to {{book.title}} on GoodReads">Good Reads Link</a></h6>
+        <p>{{book.summary}}</p>
+      </div>
     </div>
   {% endfor %}
   </div>
 </div>
-
-<script>
-  
-</script>

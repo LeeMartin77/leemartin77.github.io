@@ -1,6 +1,7 @@
 ---
 title: The Pragmatic Programmer
 author: Andy Hunt, Dave Thomas
+image: pragmatic-programmer.jpg
 goodreads: https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
 genre: Non-Fiction
 subgenre: Computing

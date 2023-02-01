@@ -1,6 +1,7 @@
 ---
 title: The Phoenix Project
 author: Gene Kim, Kevin Behr, George Spafford
+image: phoenix.jpg
 goodreads: https://www.goodreads.com/book/show/17255186-the-phoenix-project
 genre: Fiction
 subgenre: Computing

@@ -1,6 +1,7 @@
 ---
 title: Neuromancer
 author: William Gibson
+image: neuromancer.jpg
 goodreads: https://www.goodreads.com/book/show/6088007-neuromancer
 genre: Fiction
 subgenre: Science-Fiction

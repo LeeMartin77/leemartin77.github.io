@@ -1,6 +1,7 @@
 ---
 title: Bad Science
 author: Ben Goldacre
+image: bad-science.jpg
 goodreads: https://www.goodreads.com/book/show/3272165-bad-science
 genre: Non-Fiction
 subgenre: Philosophy

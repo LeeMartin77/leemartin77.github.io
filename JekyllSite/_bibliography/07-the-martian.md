@@ -1,6 +1,7 @@
 ---
 title: The Martian
 author: Andy Weir
+image: the-martian.jpg
 goodreads: https://www.goodreads.com/book/show/18007564-the-martian
 genre: Fiction
 subgenre: Science-Fiction

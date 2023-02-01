@@ -1,6 +1,7 @@
 ---
 title: The Annotated Turing
 author: Charles Petzold
+image: annotated-turing.jpg
 goodreads: https://www.goodreads.com/book/show/2333956.The_Annotated_Turing
 genre: Non-Fiction
 subgenre: Computing

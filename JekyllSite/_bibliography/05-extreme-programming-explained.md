@@ -1,6 +1,7 @@
 ---
 title: Extreme Programming Explained
 author: Kent Beck
+image: extreme-programming.jpg
 goodreads: https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained
 genre: Non-Fiction
 subgenre: Computing

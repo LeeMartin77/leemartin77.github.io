@@ -1,0 +1,33 @@
+---
+---
+
+.bibliography-item {
+    padding: 1em 0;
+    margin: 1em 0;
+    border-top: 1px gray solid;
+    display: flex;
+    flex-direction: column;
+
+    h2, h3, h4, h5, h6 {
+        margin-bottom: 0.1em;
+    }
+
+    .bibliography-item-image {
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .bibliography-item {
+        flex-direction: row;
+        .bibliography-item-image {
+            min-width: 200px;
+        }
+
+        .bibliography-item-text {
+            margin-left: 0;
+        }
+    }
+}

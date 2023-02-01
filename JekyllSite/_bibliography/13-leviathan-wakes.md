@@ -1,6 +1,7 @@
 ---
 title: Leviathan Wakes
 author: James S.A. Corey
+image: leviathan-wakes.jpg
 goodreads: https://www.goodreads.com/book/show/8855321-leviathan-wakes
 genre: Fiction
 subgenre: Science-Fiction

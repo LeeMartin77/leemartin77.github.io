@@ -1,6 +1,7 @@
 ---
 title: The Hitchhiker's Guide to the Galaxy
 author: Douglas Adams
+image: hitchhikers.jpg
 goodreads: https://www.goodreads.com/book/show/386162.The_Hitchhiker_s_Guide_to_the_Galaxy
 genre: Fiction
 subgenre: Humour
