@@ -6,15 +6,13 @@ categories: process
 excerpt_separator: <!--more-->
 ---
 
-A lot of conflict and grief within our working lives comes from the expectations and perceptions of what is happening not matching the reality. This misrepresentation of the work can take a lot of different forms - such as unrealistic expectations from upper management, teams not being transparent in what they're doing, and trying to force tactical work to fit with a predetermined strategic plan. What this blog post focuses on is projects that are planned incrementally, then try to be executed with iterations.
+Conflict and grief in our working lives often comes from expectations of what is happening not matching the reality. Misrepresentation of work can take different forms - such as unrealistic expectations from upper management, teams not being transparent in what they're doing, and trying to force tactical work to fit with a predetermined strategic plan. What this blog post focuses on is projects that are planned incrementally, then try to be executed with iterations.
 
 ![Picture of mushrooms growing on an old tree stump: https://commons.wikimedia.org/wiki/File:Daedalea_quercina_-_Eichen-Wirrling_-_oak_mazegill_-_maze-gill_fungus_-_d%C3%A9dal%C3%A9e_du_ch%C3%AAne_-_08.jpg](/images/2023-02-09-beware-the-increment.jpg)
 
 <!--more-->
 
 ## Definitions
-
-It's always important with an article like this, to really nail down the definitions being used - so even if someone uses a different words, the understanding is still coherent:
 
 ### Iteration
 
@@ -26,7 +24,7 @@ Work you have to do in a particular order to deliver any value. Imagine baking a
 
 ## What causes the mismatch
 
-What I've experienced in confusing iterations and increments often comes from breaking up a large piece of work into "smaller deliverables" - that are not actually deliverable in isolation. This results in a collection of small pieces of work, filled with chains of dependency between items, but also without the context of a coherent whole. Change is hindered because it makes it hard to consider a piece of work as part of its whole, while also pieces are risky to change (or disregard) as they may be assumed to be complete further in the plan. The project ends up looking agile from the outside - but with few of the actual benefits of fast change, feedback loops or targeted focus.
+My experience in confusing iterations and increments often comes from breaking up a large piece of work into "smaller deliverables" - that are not actually deliverable in isolation. This results in a collection of small pieces of work, filled with chains of dependency between items, but also without the context of a coherent whole. Change is hindered because it makes it hard to consider a piece of work as part of its whole, while also pieces are risky to change (or disregard) as they may be assumed to be complete further in the plan. The project ends up looking agile from the outside - but with few of the actual benefits of fast change, feedback loops or targeted focus.
 
 There are two core issues that often lie at the heart of this mismatch. The first is the reluctance of a business to rethink (or even just throw away) "completed" planning work, taking forms like customer interviews, prototype designs, roadmap exercises or quarterly/annual goals. While there is a need to plan ahead at a strategic level, the pain is when this plan becomes overly prescriptive and specific - doubly so if it is then communicated to users or shareholders. The business might then choose to change its tactical plan for delivering the work, only to find itself hobbled by a strategic plan that stands at odds to this delivery.
 
@@ -34,7 +32,7 @@ Specificity forms the second source of friction between iterative working and in
 
 ## How to test for increments
 
-Testing if your work has been structured into increments instead of iterations is relatively easy. Take a piece of work, preferably a piece of work that is slated for slightly further into the future, and ask the following questions:
+Testing if work has been structured into increments instead of iterations is relatively easy. Take a piece of work, preferably a piece of work that is slated for slightly further into the future, and ask the following questions:
 
 - Could you do this now, without any of the other planned work?
 - If you do need to do other work first, is it just one piece that you need to do first?
