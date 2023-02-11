@@ -16,11 +16,30 @@ Conflict and grief in our working lives often comes from expectations of what is
 
 ### Iteration
 
-A standalone period of work that can be done independently of the work before and after it. Imagine bricks - each brick alone is useful, can be used in many places, and you can stack and combine bricks into a building more useful than the component parts. The key is that an iteration is focused on itself - while there might be some consideration of what can come next, the iteration itself should be inherently valuable. Whomever is involved in an iteration should be able to walk away from it confident that value was delivered.
+```mermaid!
+flowchart TD
+    a{{Deliverable}}
+    b{{Deliverable}}
+    c{{Deliverable}}
+    d{{Deliverable}}
+    b --> ba{{Deliverable}}
+    c --> ba
+```
+
+A standalone period of work that can be delivered mostly independently of the work surrounding it. Imagine bricks - each brick alone is useful, can be used in many places, and you can stack and combine bricks into a building more useful than the component parts. The key is that an iteration is focused on itself - while there might be some consideration of what can come next, the iteration itself should be inherently valuable. Whomever is involved in an iteration should be able to walk away from it confident that value was delivered.
 
 ### Increment
 
-Work you have to do in a particular order to deliver any value. Imagine baking a cake - I have to mix the flour and eggs before putting the cake into the oven. The tasks are still discrete in nature, and can even be done by multiple people - but they're useless unless they're part of the whole and done in order. In a positive light, people involved in an increment should come away excited to get into the next piece of work, and feeling like they took a step closer to the overall goal.
+```mermaid!
+flowchart LR
+    a([Work])
+    a --> b([Work])
+    ba([Work]) --> c
+    b --> c([Work])
+    c --> d{{Deliverable}}
+```
+
+Work you have to do in a particular order to deliver value. Imagine baking a cake - I have to mix the flour and eggs before putting the cake into the oven. The tasks are still discrete in nature, and can even be done by multiple people - but they're useless unless they're part of the whole and done in order. In a positive light, people involved in an increment should come away excited to get into the next piece of work, and feeling like they took a step closer to the overall goal.
 
 ## What causes the mismatch
 
