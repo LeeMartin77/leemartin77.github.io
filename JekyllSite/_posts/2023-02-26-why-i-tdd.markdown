@@ -1,0 +1,91 @@
+---
+layout: post
+title: "Why I TDD"
+date: 2023-02-25 18:00:00 +0100
+categories: process
+excerpt_separator: <!--more-->
+---
+
+
+Over the last couple of years, my focus has been on process. As I experimented with more languages and frameworks, it became clear that it was where there was the most room to grow, without boxing myself into a corner. Part of this has been a real drive to not just practice Test Driven Development (TDD) by rote, but to really understand why to do it on a personal level - which I've whittled down to four core pillars.
+
+
+![Messy Workshop - Source https://commons.wikimedia.org/wiki/File:Railway_workshop_museum_exhibition_in_Ljubljana,_Slovenia.jpg](/images/2022-03-05-importance-of-maintenance.jpg)
+
+
+<!--more-->
+
+
+For an avoidance of doubt - I'm here talking more about unit and component level tests, rather than larger E2E, contract and integration tests, which will come up again at the end of this post.
+
+
+## Double entry development
+
+
+Somewhat borrowing the term from accounting - it's a lot harder to make the *same* mistake in two different places. Because the syntax of the test is different to the syntax of your code, it'll need to be written slightly differently. This then means you write the logic out twice. Even if both sides of this exchange are wrong, the test turning red will force you to re-read your code and see why it's gone red - to either update the code, update the test, or both.
+
+
+This part of the equation can be gotten almost for free, even writing tests by rote, and might be why as a junior you can experience TDD foisted on you without having it adequately explained. It's still a core benefit of writing your tests though, and when you get the rhythm of work flowing it's hard to imagine working in different ways.
+
+
+## Forcing a slower thought process
+
+
+Reductive statement first - computers are fast now. Working on a UI for example - code can be tweaked, and the application will hot reload in the background before even alt-tabbing across to it. This means the cost of "failure" appears lower - why worry too much if the code written throws some errors, just tab back and fix it. While this is phenomenal for rapid prototyping, it can lead to rabbit holes of feeling like the solution is "almost there", quickly devolving into long stretches of debugging, trying things, and fiddling with properties.
+
+
+Instead TDD offers a different path - because changes to code have to be considered and thought out with a test, nailing down *what* the code is doing becomes a critical part of development. The fast feedback loop is still present, but it's pushed down to the code and editor itself. Writing the production code does take longer than "just writing the code" when tests are written alongside - but the amount of back and forth drops considerably.
+
+
+## Optimising for changeability
+
+
+Tests often get associated with reliability in code - and while this is true, TDD doesn't guarantee runtime perfection. What is gained however, is confidence in then changing the code underneath the tests - both changing the production code without breaking the tests, or updating the tests to match new requirements of the system.
+
+
+This is most critical in long-lived systems that are being built to last the test of time. It's an acceptance that the world and business will change, and that the code will need to adapt with it. Tests can be moved, updated or deleted as needed. Or if something visible needs to change without the functionality changing, this can be done with confidence and forethought. This is also where the idea of tests being documentation of a kind creeps in - here is what this code is designed to handle, has something changed about what it's expected to handle?
+
+
+## Showing the working
+
+
+This was something that really sprang out to me early on, when reviewing a pull request from a new developer who had fixed a bug that included tests. Immediately my confidence in what had been submitted shot up, because the thought process was visible in the PR. I could see where they thought the bug was. I could see how they had put in something to mitigate it and what would happen when the issue arose.
+
+
+What this allows is for developers to review one another's work without needing to sit down and have a conversation about just what the code does. Instead the conversation can be elevated in two directions - is there a more performant way of doing this (because the tests are there and we can just run them) and does this enable some higher level user requirement (because the tests show the inputs/outputs on the logic).
+
+
+## What else do you get?
+
+
+There are benefits to TDD that aren't these four pillars - which I could also talk about, but are either less important to me, or feel more personal.
+
+
+- Reduction in the amount of bugs delivered, and less places to check for them.
+- Better understanding of the frameworks and languages worked with.
+- Increased confidence in the software being delivered.
+- A simple pleasure of turning red tests green.
+- Less emotional attachment to the code produced.
+
+
+## What you don't get from TDD
+
+
+This bears being emphasized - **TDD is not a silver bullet**.
+
+
+It's critical to point out there are requirements that are absolutely not delivered by tight-loop TDD. The classic example is that TDD won't tell you *what* your code needs to do. Whilst there are tools for trying to define external specifications and tests for an application, the best loop in TDD is the tight one. As ["Uncle Bob"](http://www.butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) puts it:
+
+
+- You are not allowed to write any production code unless it is to make a failing unit test pass.
+- You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
+- You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
+
+
+This means you need that higher-level understanding coming into writing your application code. Sure your component might be pin-sharp, tested thoroughly and utterly bulletproof - but if no user actually runs the code, what value has actually been delivered?
+
+
+Another part is "behavioral" level tests. An example of this would be classic E2E tests, which run independent of the code as written. These tests can provide confidence that the system is working - all the pieces fit together, and nothing critical is breaking. The difference is that E2E tests are often slower, require more setup, and act like a "final safety check" of the running application.
+
+
+Ultimately, I see TDD as a tool for development, rather than a way of trying to add safety to code that already exists. If you're looking for a way to *start* seeing if TDD is a technique that works for you - try using it for the next bug you're tasked with. To me, this is where TDD truly shines - it'll ask you to truly understand where the bug is, what's causing it, document it, and then craft a fix. Whilst it might feel slow and cumbersome, compare it to the time you would have spent stepping through code with a debugger, or scattering logging over the area - is it really that much slower?
