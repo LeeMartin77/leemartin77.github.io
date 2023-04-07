@@ -44,10 +44,18 @@ In order to try and give everything the even-est shot possible, the "application
 
 There are definitely flaws in the methodology - but my thinking is the flaws are at least equally affecting everything, and I was looking to put some numbers to my assumptions.
 
-## Precursor Tests
+## Initial Tests
 
-## Actual Tests
+To start, I threw together a quick Next.js application using `create-next-app`, ripped out most of the boilerplate, and then setup the index page to read the mock data JSON file and render the HTML. Then, the same for PHP - created an index.php file, and mounted it into a PHP container alongside the mock data. Anecdotally, it was quicker to do this with PHP - but on the flip side, I'm not delving into the world of PHP dependencies or frameworks. Once this was setup, I ran my initial K6 tests to see how the applications fared - two things were quickly obvious.
+
+First, while PHP was slightly ahead (635 requests served vs. Next's 481), neither application was being pushed to it's limit. My K6 test would sleep for a second after each request, which is fairly common when writing them. However it meant the test was spending the majority of it's time just waiting - so I removed the sleep. Second, Next was complaining that the page data generated was larger than it's [suggested limit](https://nextjs.org/docs/messages/large-page-data). So, in the name of fairness, I dropped the JSON used in both tests to 200 items to get under the limit. 
+
+The result - to be frank, PHP completely creamed Next.js. 
+- Next.js: 2,158 requests, with a p(90) request duration of 364ms
+- PHP: 10,202 requests, with a p(90) request duration of 96ms
+
+## More Tests
 
 ## Thoughts
 
-## Bonus: Sveltekit
+## Bonus: Sveltekit and Raw Node
