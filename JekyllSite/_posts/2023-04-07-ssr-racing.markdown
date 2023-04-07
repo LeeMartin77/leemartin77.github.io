@@ -48,7 +48,7 @@ There are definitely flaws in the methodology - but my thinking is the flaws are
 
 To start, I threw together a quick Next.js application using `create-next-app`, ripped out most of the boilerplate, and then setup the index page to read the mock data JSON file and render the HTML. Then, the same for PHP - created an index.php file, and mounted it into a PHP container alongside the mock data. Anecdotally, it was quicker to do this with PHP - but on the flip side, I'm not delving into the world of PHP dependencies or frameworks. Once this was setup, I ran my initial K6 tests to see how the applications fared - two things were quickly obvious.
 
-First, while PHP was slightly ahead (635 requests served vs. Next's 481), neither application was being pushed to it's limit. My K6 test would sleep for a second after each request, which is fairly common when writing them. However it meant the test was spending the majority of it's time just waiting - so I removed the sleep. Second, Next was complaining that the page data generated was larger than it's [suggested limit](https://nextjs.org/docs/messages/large-page-data). So, in the name of fairness, I dropped the JSON used in both tests to 200 items to get under the limit. 
+First, while PHP was slightly ahead (635 requests served vs. Next's 481), neither application was being pushed to its limit. My K6 test would sleep for a second after each request, which is fairly common when writing them. However it meant the test was spending the majority of it's time just waiting - so I removed the sleep. Second, Next was complaining that the page data generated was larger than its [suggested limit](https://nextjs.org/docs/messages/large-page-data). So, in the name of fairness, I dropped the JSON used in both tests to 200 items to get under the limit. 
 
 The result - to be frank, PHP completely creamed Next.js. 
 - Next.js: 2,158 requests, with a p(90) request duration of 364ms
@@ -76,4 +76,14 @@ And here's a table of the results, in requests-served order.
 | PHP8  | 10,567 | 92.68ms  |
 | Node | 43,458   | 19.36ms   |
 
+Here's [the repository](https://github.com/LeeMartin77/php-nextjs-drag-race) with all the test code, and the full k6 summaries of the tests that I ran, if you're curious.
+
 ## Thoughts
+
+You could just [look this kind of thing up](https://www.techempower.com/benchmarks/#section=data-r21&test=composite) if you care about raw nuts-and-bolts performance - after all, if it was only about performance, we'd be writing C/Assembly all day or serving purely static content. However, this was more of an exercise that we shouldn't judge languages and engines based purely on their popularity and the amount of people talking about them. This was coupled with really wanting to isolate HTML rendering as the aspect I cared about.
+
+It's not hard to reason that PHP would be faster than Next.js for rendering and serving a webpage - after all, there is a lot of code in-between the JSX a developer writes and sees, and the HTML that gets generated. It's also fair to level the criticism that comparing a framework for Next.js/Sveltekit, and native execution for PHP isn't an even fight.
+
+Where the point comes for me though, is that PHP is *by its nature* a framework for producing webpages. It's baked into the DNA of the language and engine. In order to serve up HTML, you just write the HTML you want to serve up. It even supports dropping in and out of the HTML at a whim with it's tags. This is a far cry from a *clean* way to write code - dropping logic in together with your markup is a quick way to have a very unfun time. However, it's possible we've strayed too far in the other direction - utilising abstract tools and languages for real time interaction in order to generate flat webpage content.
+
+I'm still going to be using Node based frameworks - although I do think I need to give sveltekit a closer look - because I prefer Typescript as a developer experience. But it's always important to know the limitations of what you work with, so you can know where your application might catch you out.
