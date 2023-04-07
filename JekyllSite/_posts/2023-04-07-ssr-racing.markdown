@@ -14,7 +14,7 @@ When working on [Mince Pie Rank](https://mincepierank.co.uk) at christmas, I was
 
 After adding some "lazy-rendering" based on the user scrolling to the bottom of the page, I made a mental note to come back to the subject. Server side rendering performance was important to me for Mince Pie Rank, as I wanted the website to be easily found via search engines and indexing - and better page performance is a simple way to improve page rankings.
 
-My formative years of development were with PHP, and I'd never had to even think about HTML rendering performance, which made me immediately wonder how PHP would stack up next to Next.js in rendering time. but it's always best to test your assumptions, so that's what I'm here to do today.
+My formative years of development were with PHP, and I'd never even had to think about HTML rendering performance, which made me immediately wonder how PHP would stack up next to Next.js in rendering time. but it's always best to test your assumptions, so that's what I'm here to do today.
 
 ![Drag Racing - Source https://commons.wikimedia.org/wiki/File:USATrip-Day15_BandimereKBPIRocknRollShow_24.8.2014_SW190.jpg](/images/2023-04-07-ssr-racing.jpeg)
 
