@@ -56,6 +56,24 @@ The result - to be frank, PHP completely creamed Next.js.
 
 ## More Tests
 
-## Thoughts
+So, PHP is faster - but I was compelled to go further. I tested:
 
-## Bonus: Sveltekit and Raw Node
+- PHP 5.6
+- PHP 7.2 (initial version)
+- PHP 8
+- Next.js
+- Sveltekit
+- Raw node http (serving up a string)
+
+And here's a table of the results, in requests-served order.
+
+| Engine | Request Count | p(90) |
+|------|-----|--------|
+| Next.js | 2,158  | 364ms   |
+| Sveltekit | 3,968  | 197.94ms |
+| PHP5.6  | 7,625  | 118.71ms   |
+| PHP7.2  | 10,202  | 96.44ms    |
+| PHP8  | 10,567 | 92.68ms  |
+| Node | 43,458   | 19.36ms   |
+
+## Thoughts
