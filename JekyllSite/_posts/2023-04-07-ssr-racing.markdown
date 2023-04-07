@@ -65,7 +65,7 @@ So, PHP is faster - but I was compelled to go further. I tested:
 - PHP 8
 - Next.js
 - Sveltekit
-- Raw node http (serving up a string)
+- Raw node http (using template literals to write HTML)
 
 And here's a table of the results, in requests-served order.
 
