@@ -16,18 +16,41 @@ It's really important to kick this post off by saying there is nothing fundament
 
 ## The Web has changed
 
-- The web and browsers were very different before
-- JSX almost feels like an over-abstraction of the HTML now
+The seed that started this idea in my head was the evolution of the browser API. My earliest reference point for working with JavaScript on the web was my university days, back around 2010-2013, however even that small distance ago feels like aeons. Here's a (small fraction) of the things that have been released as part of the standard browser HTML5 and JS APIs since then:
+
+```
+Date and Time input types
+Form Validation
+OffscreenCanvas
+WebGL
+Dialog Element
+Search input type
+
+BigInt
+Arrow functions
+Object.entries
+Promises
+Fetch
+IndexedDB
+```
+
+The heady days of 2013 is where React was incepted though - so in a lot of ways, a framework from this time would have to provide a degree of support for these things. Is it that simple? No - the actual library itself has of course been updated many, many times since then. But the core idea of using JSX to template your DOM hasn't gone anywhere. For me, it almost feels like an overabstraction now - HTML has become significantly more expressive, and the JavaScript to support it has become more consise. Yet we still think in terms of the Shadow DOM and render loops - something that I'll come back to for another point of this post.
 
 ## Developers have shoehorned it everywhere
 
-- Next/Vercel, Those mad kube handlers, (find more examples)
-- PHP was on a similar track before it collapsed (long enough to become the villain)
+One of the key selling points of React when it was put up against it's top rivals (Vue and Angular), is that _it isn't a framework_. React by design tries not to have opinions about how you should build your application - you can bring whatever tooling you want to handle things like state, styling and networking, and it'll take care of templating and re-rendering the webpage based on the data. Simple enough a premise. I'll expand on how this can be as much of a curse as a benefit later in terms of how people build react applications, but the other side of this flexibility is that enterprising developers have shoehorned React everywhere.
+
+Want to use it for a full application? Try Next, Gatsby, or Remix. You can try and use it for templating your kubernetes resources with Rekube. Build whole infrastructures with Adapt. The heart of this is that developers are wanting to use a library they understand, to do things it was never really designed for. For example, take Next - with it's support for SSR, what's the point exactly in diffing against a shadow dom? (research into this)
+
+The nearest analogy I can think to this is PHP, and more specifically WordPress, which is where I started my career. Developers were using WordPress for everything - it was free, "simple", and widely supported. A platform for handling blogs was quickly turned into ecommerce stores, SaaS platorms and company websites. The "rough edges" were filed down or ignored, and endless plugins were produced. The end state of this was swathes of unmaintainable websites that quickly fell apart at the seams as soon as they stopped being actively added to. Sound familiar at all?
 
 ## "React Developer" doesn't mean anything anymore
 
-- Do you use redux forms or formik? how about redux? Functional or class components? Apollo or rest services? 
-- With all the derivations of React out there being a "react developer" is almost just a subset of JS developer (cough - python) which is already a complete crapshoot on what the developer will be like
+The other side of this choice within the React ecosystem, is that saying you "work with React" doesn't really tell the full story. Do you use Redux, Recoil or the Context api? How about for talking to a backend - are you a committed Apollo user, are you sticking with Axios, or have you been lucky enough to use the fetch API directly? What about visual frameworks - Chakra, MUI or keeping it oldschool with React Bootstrap?
+
+With each of these choices, the application(s) you work with either as an individual or as a company become more facetted and bespoke. While it's true a developer can pick up any framework or language given enough time, it's still a painful process moving between libraries as while React may not be opinionated - the libraries built to enhance it often are.
+
+Compare this to something like Angular, and you can see where there difference lies. Angular is highly opinionared about how things like state and service calls should be handled, with a robust dependency injection system forming a big part of the puzzle, mixed in with RxJS. While this might not be as _cool_ as something like React, it does make Angular developers largely interchangeable - while the specifics of an application may change, the heart will look very similar.
 
 ## The swing back to minimalist and opinionated is starting
 
