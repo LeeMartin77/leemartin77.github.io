@@ -1,0 +1,37 @@
+---
+layout: default
+title:  "Projects"
+---
+
+<div class="home">
+  <h1>Projects</h1>
+  <p>These are some of the personal projects I've worked on over the years</p>
+  <div id="projects">
+
+  {% for project in site.projects %}
+    <div class="projects-item">
+      {% if project.image %}
+      <div class="projects-item-image">
+        <img width="200" src="/images/projects/{{project.image}}" alt="Cover of {{project.title}}"/>
+      </div>
+      {% endif %}
+      <div class="projects-item-text">
+        <h2>{{project.title}}</h2>
+        {% if project.badge %}<div><img height="20px" alt="GitHub last commit (branch)" src="{{project.badge}}"></div>{% endif %}
+        <ul class="label-list">
+          {% for label in project.labels %}
+          <li>{{label}}</li>
+          {% endfor %}
+        </ul>
+        <ul class="technology-list">
+          {% for label in project.technologies %}
+          <li>{{label}}</li>
+          {% endfor %}
+        </ul>
+        <h3>{% if project.website %} <a href="{{project.website}}"  alt="Link to {{project.title}}">Project</a> | {% endif %}<a href="{{project.github}}"  alt="Link to {{project.title}} source code">Source Code</a></h3>
+        <p>{{project.summary}}</p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>

@@ -34,6 +34,7 @@ pagination:
   sort_reverse: true
 collections:
   bibliography:
+  projects:
 # Build settings
 theme: minima
 plugins:
