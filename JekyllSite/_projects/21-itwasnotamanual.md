@@ -3,7 +3,7 @@ title: It Was Not a Manual
 image: itwasnotamanual.png
 github: https://github.com/LeeMartin77/itwasnotamanual.com
 badge: https://img.shields.io/github/last-commit/LeeMartin77/itwasnotamanual.com/main
-website: https://itwasnotamanual.com/
+website: https://itwasnotamanual.leejohnmartin.dev/
 labels: 
     - Irreverent
     - Website
