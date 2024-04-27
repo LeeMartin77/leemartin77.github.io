@@ -7,7 +7,8 @@ website: https://mincepierank.co.uk/
 labels: 
     - Website
 technologies: 
-    - Sveltekit
-    - Cassandra
+    - Go
+    - Htmx
+    - Postgres
 summary: A website for ranking mince pies, primarily focused on those available from major UK brands. Pretty much exactly what it says on the tin!
 ---
