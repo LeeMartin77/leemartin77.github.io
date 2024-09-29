@@ -12,6 +12,8 @@ So I want you to imagine you're solving a crossword puzzle.
 
 <!--more-->
 
+![Crossword Puzzle - Source https://commons.wikimedia.org/wiki/File:Crossword_puzzle.jpg](/images/2024-09-27-solving-crosswords.jpeg)
+
 ## Solving Crosswords at Scale
 
 You are part of a crossword-solving team, where you try and solve crosswords fast enough to win a prize from the publisher. There are a dozen of you - designated "clue solvers" - where you are given a clue from the puzzle to solve, then add it to the crossword. Aside from solvers, there are a trio of "word checkers" who'll check your solution is in the official dictionary used by the publisher. Finally there are a pair of managers - one decides which clues should be given to which solver, and another who is responsible for making sure all the solutions fit together.
