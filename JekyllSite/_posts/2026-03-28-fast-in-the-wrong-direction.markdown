@@ -10,6 +10,10 @@ LLM-enhanced programming is here to stay. Arguments against it are dead, especia
 
 No, this is about trying to encourage you to step left, when the whole world is pretending to sprint to the right.
 
+![Stone Carver - Source https://commons.wikimedia.org/wiki/File:Stone-cutter,_chisel,_beret_Fortepan_89605.jpg](/images/2026-03-28-fast-in-the-wrong-direction.jpeg)
+
+
+
 <!--more-->
 
 <div class="ai-summary">
