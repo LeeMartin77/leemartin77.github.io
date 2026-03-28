@@ -36,7 +36,7 @@ No, this is about trying to encourage you to step left, when the whole world is 
 
 Opening up any social news feed - especially LinkedIn - is an adventure in insanity now. Eight out of ten (no citation, but come on) posts are an LLM/Transformer generated pile of slop. Patterns without unique voice everywhere as you scroll. In my world of software development, it's always the same story - someone picks up a Claude subscription, feeds it a prompt about some "app" they want built, and shares the same tired screenshots of a material/tailwind UI alongside how they predict development is dead inside six months.
 
-Ignoring that this is the longest six months ever (this rhetoric was around _way_ before LLMs, basically since getting into programming it's been a trope), it misses the point of the job. Truthfully creating software from scratch has _always_ been an absolutely wild and fast riot of fun. That initial rush of dopamine from spending a few hours locked in smashing out a prototype is delicious. 
+Ignoring that this is the longest six months ever (this rhetoric was around _way_ before LLMs, basically since getting into programming its been a trope), it misses the point of the job. Truthfully creating software from scratch has _always_ been an absolutely wild and fast riot of fun. That initial rush of dopamine from spending a few hours locked in smashing out a prototype is delicious. 
 
 Anyone who thinks that pumping out a functioning bit of software inside an afternoon is some radical jump in speed clearly hasn't ever participated in a hackathon. Even speaking personally as a not particularly fast programmer, I've smashed out projects in a weekend - or even a day - plenty of times, especially when the idea just wants to get out. Difference being now you can get that without having to actually open up an editor or read/write the code, and the UI that gets smeared over the top of it is slicker. Advantages to training models on good looking interfaces.
 
@@ -52,7 +52,7 @@ In fact I'd go as far as arguing that bringing solutions to problems instead of 
 
 If you've got a career that's over the 5 year mark, you've been there in your junior days. Diligently working on that bug to change the colour of a button, then the button doesn't exist anymore because someone with more autonomy than you has decided it doesn't need to exist. Suddenly you're helping with a giant feature release that has everyone running around like rats on a hot tin roof, because the wrong screen got shown in the wrong meeting, and someone gave a timeline without discussion.
 
-It's a disenfranchising, painful experience and in my mind, speaks to a style of software development that should remain firmly in the hobby project. This is something that it's important to be really, _really_ explicit about - it has nothing at all to do with LLMs. This is a style of coworker who has existed in the industry for a really long time. Haven't ever worked with someone who behaves that way? Might be worth examining, that.
+It's a disenfranchising, painful experience and in my mind, speaks to a style of software development that should remain firmly in the hobby project. This is something that its important to be really, _really_ explicit about - it has nothing at all to do with LLMs. This is a style of coworker who has existed in the industry for a really long time. Haven't ever worked with someone who behaves that way? Might be worth examining, that.
 
 To continue to be really clear - this kind of software development isn't evil or wrong, it just can't pretend to be collaborative. It works incredibly well for prototypes, demos, one-shot tools, bespoke software and contract work. You fundamentally cannot build a business around it though - because businesses succeed on shared connection, tribal domain knowledge and empassioned, empowered people pulling in the same direction.
 
@@ -80,7 +80,7 @@ Reports of "AI-induced psychosis" (Sorry, I've got to put anything with "AI" in 
 
 ### Craft by hand - even if it's just quietly
 
-Get LLMs out of your pet projects. I'm a massive proponent for building near-useless software and tools, bespoke to just you as an individual or just as a joke. The process and feedback loop of gently layering code together - feeling the repetition in your fingers as you build out a functioning system - is it's own form of dopamine. If nothing else, if you've fully abandoned this, you're missing out on another form of satisfaction. Just the feeling of hooking up one handler, building that one migration, putting together that one test suite - it feels good.
+Get LLMs out of your pet projects. I'm a massive proponent for building near-useless software and tools, bespoke to just you as an individual or just as a joke. The process and feedback loop of gently layering code together - feeling the repetition in your fingers as you build out a functioning system - is its own form of dopamine. If nothing else, if you've fully abandoned this, you're missing out on another form of satisfaction. Just the feeling of hooking up one handler, building that one migration, putting together that one test suite - it feels good.
 
 The ability to parse and develop a taste of your own for what you see as "good code" is invaluable. Even if it's not the same as the person next to you, at least if you've got _an opinion_ you can have a reasoned discussion about the software you build. How can you know the pitfalls with architectural decisions being made in the code you push, if you've not personally committed to those consequences with a bit of sweat? When the code is "free", the investment is zero, so why would you worry about the future?
 
@@ -108,7 +108,7 @@ This in my opinion is the big one. People seem to advocate for just fully steppi
 
 If you actually _watch_ what the agent is "thinking", you'll just see how mad it goes, how often. Constant loops of the same words over and over. Insane discussions with itself. It saying it categorically _shouldn't_ do something then just turning around and doing it anyway.
 
-When this happens I realise I've asked the infinite monkey cage to do too much, I swiftly take the thread behind the chemical shed and revert it's changes, then break the problem down to a smaller chunk. Code is much like dog muck left in the rain - it rarely gets better with time, and expecting the stochastic parrot to be able to "realise" it should clear up it's own mess is asking quite a lot.
+When this happens I realise I've asked the infinite monkey cage to do too much, I swiftly take the thread behind the chemical shed and revert its changes, then break the problem down to a smaller chunk. Code is much like dog muck left in the rain - it rarely gets better with time, and expecting the stochastic parrot to be able to "realise" it should clear up its own mess is asking quite a lot.
 
 ## Conclusion
 
